@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: materialized_table
+    description: Provides revenue per payment method per month
+    tests:
+      - unique:
+          column_name: "(order_month || '-' || payment_method)"
